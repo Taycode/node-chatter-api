@@ -1,6 +1,7 @@
 const { Router } = require('express');
 
 const router = Router();
+const Post = require('../models/posts');
 
 /* GET index page. */
 router.get('/', (req, res) => {
@@ -8,5 +9,6 @@ router.get('/', (req, res) => {
     title: 'Express'
   });
 });
+
 
 module.exports = router;
