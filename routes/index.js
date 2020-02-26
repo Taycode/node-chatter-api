@@ -1,14 +1,16 @@
 const { Router } = require('express');
+const PostController = require('../controllers/posts');
+
 
 const router = Router();
-const Post = require('../models/posts');
 
-/* GET index page. */
-router.get('/', (req, res) => {
-  res.render('index', {
-    title: 'Express'
-  });
-});
+// /* GET index page. */
+// router.get('/', (req, res) => {
+//   res.render('index', {
+//     title: 'Express'
+//   });
+// });
 
+router.post('/post', PostController.send_post);
 
 module.exports = router;
